@@ -14,12 +14,10 @@
 
     @property (nonatomic, weak) id<ResultDataInfo> delegate;
 
-    @property (weak, nonatomic) IBOutlet UILabel *points;
-    @property (weak, nonatomic) IBOutlet UILabel *category;
+    @property (weak, nonatomic) IBOutlet UILabel *summaryComment;
+ 
     
     @property(nonatomic,strong)NSMutableDictionary *factorsDegreeValues;
 
 
-- (IBAction)calculate:(UIBarButtonItem *)sender;
-    
 @end

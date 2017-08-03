@@ -28,13 +28,6 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Foh-8F-d1V">
-                            <rect key="frame" x="0.0" y="156" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactorCell" textLabel="OPs-ZT-qw5" detailTextLabel="sQE-jy-iHr" style="IBUITableViewCellStyleSubtitle" id="Es0-ok-4ul">
                                 <rect key="frame" x="0.0" y="112" width="375" height="44"/>
@@ -77,9 +70,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="points" destination="Foh-8F-d1V" id="YXW-Tg-z0f"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grd-e1-2Ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,23 +83,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0kF-dk-JVE">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Vxx-57-DeQ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h6E-YK-8Bx">
-                            <rect key="frame" x="0.0" y="156" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofq-xb-XNQ">
+                                    <rect key="frame" x="14" y="17" width="347" height="53"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultsCell" textLabel="zy3-7a-vi6" detailTextLabel="OZq-ky-97v" style="IBUITableViewCellStyleValue1" id="wUS-CN-KEk">
-                                <rect key="frame" x="0.0" y="112" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="111" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wUS-CN-KEk" id="LED-AY-hIp">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -147,8 +137,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="category" destination="h6E-YK-8Bx" id="08c-5B-6Vw"/>
-                        <outlet property="points" destination="0kF-dk-JVE" id="CEj-fd-KQG"/>
+                        <outlet property="summaryComment" destination="Ofq-xb-XNQ" id="6va-lZ-onE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVH-9q-yeP" userLabel="First Responder" sceneMemberID="firstResponder"/>

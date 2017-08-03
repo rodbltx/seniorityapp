@@ -16,9 +16,8 @@
 @property(nonatomic,strong)NSString *factorDegreeString;
 @property(nonatomic,strong)NSArray *factorDegreeArray;
 
-@property (weak, nonatomic) IBOutlet UILabel *points;
 
 @end
 
 
-//- (IBAction)calculate:(UIBarButtonItem *)sender;
+

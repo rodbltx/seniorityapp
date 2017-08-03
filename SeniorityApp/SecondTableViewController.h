@@ -28,6 +28,3 @@
 
 @end
 
-
-//@property(nonatomic,strong)NSString *factorDegree;
-//@property(nonatomic,strong)NSString *factorArray;

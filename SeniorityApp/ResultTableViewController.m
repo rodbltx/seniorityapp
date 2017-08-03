@@ -28,7 +28,7 @@
     
     allKeys = [_factorsDegreeValues allKeys];
     allValues = [_factorsDegreeValues allValues];
-    _points.text = [NSString stringWithFormat:@"This is the Summary Results for this employee:"];
+    _summaryComment.text = [NSString stringWithFormat:@"This is the Summary Results for this employee:"];
 
  
     NSLog(@"Count : %d", [allKeys count]);
@@ -113,6 +113,5 @@
 
 
 
-- (IBAction)calculate:(UIBarButtonItem *)sender {
-}
+
 @end
