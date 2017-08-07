@@ -11,11 +11,11 @@
 
 
 @interface ResultTableViewController () {
-    NSArray *factors;
+   // NSArray *factors;
     NSArray * allKeys;
     NSArray *allValues;
     
-    NSMutableDictionary *factorsDegreeValues;
+ //   NSMutableDictionary *factorsDegreeValues;
 }
     
 @end
@@ -24,13 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", _factorsDegreeValues);
+    NSLog(@"factorsDegreeValues: %@", _factorsDegreeValues);
     
     allKeys = [_factorsDegreeValues allKeys];
     allValues = [_factorsDegreeValues allValues];
     _summaryComment.text = [NSString stringWithFormat:@"This is the Summary Results for this employee:"];
 
- 
+    NSLog(@"factores : %@", _factors);
     NSLog(@"Count : %d", [allKeys count]);
 
 }
@@ -52,7 +52,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-      return [allKeys count];
+      return [_factors count];
 }
 
 
@@ -66,11 +66,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
  
-    [cell.textLabel setText:[allKeys objectAtIndex:indexPath.row]];
+    [cell.textLabel setText:[_factors objectAtIndex:indexPath.row]];
     
-    NSString *factorKey = [allKeys objectAtIndex:indexPath.row];
-    int factorValue = [[allValues objectAtIndex:indexPath.row] integerValue];
+  //  NSString *factorKey = [allKeys objectAtIndex:indexPath.row];
+  //  int factorValue = [[allValues objectAtIndex:indexPath.row] integerValue];
     
+    NSString *factorKey = [_factors objectAtIndex:indexPath.row];
+  
+    int factorValue = [[_factorsDegreeValues objectForKey:factorKey] integerValue];
+
+
  
     if ([factorKey isEqualToString:@"Formal Education"]){
         factorValue = factorValue * 5;
@@ -87,7 +92,7 @@
     if ([factorKey isEqualToString:@"Technical Skills"]){
         factorValue = factorValue * 20;
     }
-    if ([factorKey isEqualToString:@"Leadership experience"]){
+    if ([factorKey isEqualToString:@"Leadership Experience"]){
         factorValue = factorValue * 10;
     }
     if ([factorKey isEqualToString:@"Empowerment"]){
@@ -96,7 +101,7 @@
     
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%d",factorValue]];
     
-     NSLog(@"%@", [allValues objectAtIndex:indexPath.row]);
+   //  NSLog(@"%@", [allValues objectAtIndex:indexPath.row]);
      return cell;
 }
 

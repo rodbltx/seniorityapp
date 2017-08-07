@@ -10,6 +10,7 @@
 		F25E84801F32A5C90082E531 /* SeniorityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25E847F1F32A5C90082E531 /* SeniorityTableViewController.m */; };
 		F27558A31F25B2C700C59DDC /* ItemImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27558A21F25B2C700C59DDC /* ItemImageCell.m */; };
 		F28818C51F27F8C500A81B94 /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28818C41F27F8C500A81B94 /* ResultTableViewController.m */; };
+		F29566E61F38C72D005D8E89 /* factors.json in Resources */ = {isa = PBXBuildFile; fileRef = F29566E51F38C72D005D8E89 /* factors.json */; };
 		F2BFB95B1F0AA38A0014BCAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BFB95A1F0AA38A0014BCAF /* main.m */; };
 		F2BFB95E1F0AA38A0014BCAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BFB95D1F0AA38A0014BCAF /* AppDelegate.m */; };
 		F2BFB9641F0AA38A0014BCAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2BFB9621F0AA38A0014BCAF /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		F28818C31F27F8C500A81B94 /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
 		F28818C41F27F8C500A81B94 /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
 		F28818C71F27FF4700A81B94 /* ResultDataInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultDataInfo.h; sourceTree = "<group>"; };
+		F29566E51F38C72D005D8E89 /* factors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = factors.json; sourceTree = "<group>"; };
 		F2BFB9561F0AA38A0014BCAF /* SeniorityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeniorityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2BFB95A1F0AA38A0014BCAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2BFB95C1F0AA38A0014BCAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				F25E84821F32A8CE0082E531 /* SeniorityDataInfo.h */,
 				F27558A21F25B2C700C59DDC /* ItemImageCell.m */,
 				F27558A51F25B47700C59DDC /* ItemImageCell.h */,
+				F29566E51F38C72D005D8E89 /* factors.json */,
 			);
 			path = SeniorityApp;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				F2BFB9691F0AA38A0014BCAF /* LaunchScreen.storyboard in Resources */,
 				F2BFB9661F0AA38A0014BCAF /* Assets.xcassets in Resources */,
+				F29566E61F38C72D005D8E89 /* factors.json in Resources */,
 				F2BFB9641F0AA38A0014BCAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,9 @@
 
 
 @interface RootTableViewController ()  {
-    NSArray *factors;
+    NSMutableArray *factors;
+    NSDictionary *factorsDict;
+    
     NSMutableArray *imageNameArray;
     NSIndexPath *selectedIndexPath;
     
@@ -26,15 +28,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    factors = [NSArray arrayWithObjects:@"Formal Education",@"Experience", @"Management", @"Communication",@"Technical Skills",@"Leadership experience",@"Empowerment",  nil];
+    
+    [self loadJsonData];
+
     
     factorsDegreeValues = [[NSMutableDictionary alloc] init];
     
     imageNameArray = [NSMutableArray arrayWithArray:@[@"image1",@"image2",@"image3",@"image4",@"image5",@"image6",@"image7"]];
     
-
+    
+    
+    //   factors = [NSArray arrayWithObjects:@"Formal Education",@"Experience", @"Management", @"Communication",@"Technical Skills",@"Leadership experience",@"Empowerment",  nil];
 
 }
+
+
+- (void)loadJsonData {
+    NSError *error = nil;
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"factors" ofType:@"json"];
+    
+    NSData *responseData = [[NSData alloc] initWithContentsOfFile:jsonPath];
+
+    factorsDict = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+    
+    
+    if(factorsDict){
+        factors = [NSMutableArray array];
+        for (id factorDict in [factorsDict objectForKey:@"factors"]){
+            NSString *factorName = [factorDict objectForKey:@"factor"];
+            [factors addObject:factorName];
+        }
+     // NSLog(@"JSON: %@", factors);
+    }
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -94,8 +122,8 @@
         
         resultViewController.delegate = self;
         resultViewController.factorsDegreeValues = factorsDegreeValues;
-
-        NSLog(@"%@", factorsDegreeValues);
+        resultViewController.factors = factors;
+     //   NSLog(@"%@", factorsDegreeValues);
         
 
     }

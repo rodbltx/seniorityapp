@@ -61,7 +61,7 @@
         if ([key isEqualToString:@"Technical Skills"]){
             value = value * 20;
         }
-        if ([key isEqualToString:@"Leadership experience"]){
+        if ([key isEqualToString:@"Leadership Experience"]){
             value = value * 10;
         }
         if ([key isEqualToString:@"Empowerment"]){

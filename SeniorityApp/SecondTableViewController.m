@@ -94,7 +94,7 @@
         elementId = 4;
         return [elements[(int)elementId] count];
     }
-    if ([_factorName isEqualToString:@"Leadership experience"]){
+    if ([_factorName isEqualToString:@"Leadership Experience"]){
         elementId = 5;
         return [elements[(int)elementId] count];
     }
@@ -135,7 +135,7 @@
     if ([_factorName isEqualToString:@"Technical Skills"]){
         cell.textLabel.text = [[technicalSkills objectAtIndex:indexPath.row] objectAtIndex:0];
     }
-    if ([_factorName isEqualToString:@"Leadership experience"]){
+    if ([_factorName isEqualToString:@"Leadership Experience"]){
         cell.textLabel.text = [[leadershipExperience objectAtIndex:indexPath.row] objectAtIndex:0];
     }
     if ([_factorName isEqualToString:@"Empowerment"]){

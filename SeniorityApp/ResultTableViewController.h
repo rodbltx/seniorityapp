@@ -16,7 +16,7 @@
 
     @property (weak, nonatomic) IBOutlet UILabel *summaryComment;
  
-    
+    @property(nonatomic,strong)NSMutableArray *factors;
     @property(nonatomic,strong)NSMutableDictionary *factorsDegreeValues;
 
 

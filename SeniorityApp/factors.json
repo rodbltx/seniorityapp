@@ -1,0 +1,41 @@
+{
+    "factors": [
+      {
+        "factor":"Formal Education",
+        "help":"There is a list of available options, you have to choose the adequate option that match the education level for this employee.",
+        "factorPosition":"1"
+      },
+      {
+        "factor":"Experience",
+        "help":"There is a list of available options, you have to choose the adequate option that match the previous work experience for this employee. You can choose between no experience and 15 or more years of experience",
+        "factorPosition":"2"
+    
+      },
+      {
+        "factor":"Management",
+        "help":"There is a list of available options, you have to choose the adequate option that match the type of management the employee has. Also you have to take into account the number of people in charge, responsibility for assignments, complexity of the project or client and resolution of human resources issues.",
+        "factorPosition":"3"
+      },
+      {
+        "factor":"Communication",
+        "help":"There is a list of available options, you have to choose the adequate option that match the grade of communication the employee has.",
+        "factorPosition":"4"
+      },
+      {
+        "factor":"Technical Skills",
+        "help":"lalala",
+        "factorPosition":"5"
+                
+      },
+      {
+        "factor":"Leadership Experience",
+        "help":"lalalale",
+        "factorPosition":"6"
+      },
+      {
+        "factor":"Empowerment",
+        "help":"lalalaemp",
+        "factorPosition":"7"
+      }
+    ]
+}
