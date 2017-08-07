@@ -39,9 +39,6 @@
 
     imageNameArray = [NSMutableArray arrayWithArray:@[@"image1",@"image2",@"image3",@"image4",@"image5",@"image6",@"image7"]];
     
-    
-    
-    //   factors = [NSArray arrayWithObjects:@"Formal Education",@"Experience", @"Management", @"Communication",@"Technical Skills",@"Leadership experience",@"Empowerment",  nil];
 
 }
 
@@ -126,7 +123,6 @@
         resultViewController.delegate = self;
         resultViewController.factorsDegreeValues = factorsDegreeValues;
         resultViewController.factors = factors;
-     //   NSLog(@"%@", factorsDegreeValues);
         
 
     }
@@ -152,18 +148,11 @@
   
     [factorsDegreeValues setObject:[_factorDegreeArray objectAtIndex:1] forKey:cell.textLabel.text];
     
-   // NSLog(@"factorsDegreeValuesROOT: %@", factorsDegreeValues);
-   //  NSLog(@"Count : %d", [factorsDegreeValues count]);
     
     if ([factorsDegreeValues count]==7){
         _calculateButton.enabled = YES;
     }
 }
-
-
-//- (IBAction)calculate:(UIBarButtonItem *)sender {}
-
-//-(void)setFactorDegreeValueOnArray:(NSInteger)factorDegreeValue{}
 
 
 
