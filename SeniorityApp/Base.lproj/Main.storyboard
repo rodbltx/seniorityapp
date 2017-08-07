@@ -70,6 +70,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="calculateButton" destination="rUr-5K-XOE" id="Co7-cj-MyU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grd-e1-2Ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

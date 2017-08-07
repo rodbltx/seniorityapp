@@ -16,6 +16,7 @@
 @property(nonatomic,strong)NSString *factorDegreeString;
 @property(nonatomic,strong)NSArray *factorDegreeArray;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *calculateButton;
 
 @end
 

@@ -31,9 +31,12 @@
     
     [self loadJsonData];
 
+    _calculateButton.enabled = NO;
+    
     
     factorsDegreeValues = [[NSMutableDictionary alloc] init];
-    
+
+
     imageNameArray = [NSMutableArray arrayWithArray:@[@"image1",@"image2",@"image3",@"image4",@"image5",@"image6",@"image7"]];
     
     
@@ -97,7 +100,7 @@
     
     cell.imageView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
 
-    
+        
     return cell;
 }
 
@@ -149,7 +152,12 @@
   
     [factorsDegreeValues setObject:[_factorDegreeArray objectAtIndex:1] forKey:cell.textLabel.text];
     
+   // NSLog(@"factorsDegreeValuesROOT: %@", factorsDegreeValues);
+   //  NSLog(@"Count : %d", [factorsDegreeValues count]);
     
+    if ([factorsDegreeValues count]==7){
+        _calculateButton.enabled = YES;
+    }
 }
 
 
