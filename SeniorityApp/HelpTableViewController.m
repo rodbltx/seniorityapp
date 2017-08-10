@@ -8,7 +8,13 @@
 
 #import "HelpTableViewController.h"
 
-@interface HelpTableViewController ()
+@interface HelpTableViewController (){
+
+//NSMutableArray *helpTips;
+NSMutableDictionary *helpTips;
+NSDictionary *factorsDict;
+NSString *helpTipSelected;
+}
 
 @end
 
@@ -16,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    helpTips = [[NSMutableDictionary alloc] init];
+    [self loadJsonData];
+    
+    [_helpTipLabel setNumberOfLines:0];
+    [_helpTipLabel sizeToFit];
     
 
 }
@@ -37,6 +49,29 @@
     return 0;
 }
 
+- (void)loadJsonData {
+    NSError *error = nil;
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"factors" ofType:@"json"];
+    
+    NSData *responseData = [[NSData alloc] initWithContentsOfFile:jsonPath];
+    
+    factorsDict = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+    
+    if(factorsDict){
+        
+        for (id factorDict in [factorsDict objectForKey:@"factors"]){
+            NSString *factorName = [factorDict objectForKey:@"factor"];
+            NSString *helpTip = [factorDict objectForKey:@"help"];
+            [helpTips setValue:helpTip forKey:factorName];
+        }
+        
+        helpTipSelected = [helpTips objectForKey:_factorName];
+//         NSLog(@"helpTipSelected - %@", helpTipSelected);
+        
+        _helpTipLabel.text = helpTipSelected;
+    }
+    
+}
 
 
 /*

@@ -10,7 +10,7 @@
 #import "FactorDegreeSelected.h"
 #import "HelpTableViewController.h"
 
-@interface SecondTableViewController : UITableViewController
+@interface SecondTableViewController : UITableViewController <passFactorName>
 
 
 @property (nonatomic, weak) id<FactorDegreeSelected> delegate;

@@ -6,6 +6,7 @@
 //  Copyright © 2017 Belatrix. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import "SecondTableViewController.h"
 
 @interface SecondTableViewController ()
@@ -13,13 +14,9 @@
 @end
 
 @implementation SecondTableViewController {
-    NSArray *formalEducation;
-    NSArray *experience;
-    NSArray *management;
-    NSArray *communication;
-    NSArray *technicalSkills;
-    NSArray *leadershipExperience;
-    NSArray *empowerment;
+    NSArray *formalEducation, *experience, *management, *communication;
+    NSArray *technicalSkills, *leadershipExperience, *empowerment;
+    
     NSArray *elements;
     
     NSInteger elementId;
@@ -161,6 +158,23 @@
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    
+    if ([[segue identifier]isEqualToString:@"showHelp"]) {
+        HelpTableViewController *helpViewController = segue.destinationViewController;
+        
+        helpViewController.delegate = self;
+        helpViewController.factorName = _factorName;
+
+    }
+    
+}
+
+
 
 
 @end

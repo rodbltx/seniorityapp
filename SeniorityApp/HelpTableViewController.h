@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol passFactorName <NSObject>
+@end
+
 @interface HelpTableViewController : UITableViewController
+@property (nonatomic, weak) id<passFactorName> delegate;
+@property (nonatomic, strong) NSString *factorName;
+
+@property (weak, nonatomic) IBOutlet UILabel *helpTipLabel;
 
 @end

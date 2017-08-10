@@ -2,40 +2,33 @@
     "factors": [
       {
         "factor":"Formal Education",
-        "help":"There is a list of available options, you have to choose the adequate option that match the education level for this employee.",
-        "factorPosition":"1"
+        "help":"There is a list of options available, you must choose one of the options that corresponds with the level of education of the employee. If the employee does not finish his / her non-university studies you must choose the option: Incomplete Terciary Education. If the employee has incomplete university studies you must choose the option: Incomplete Bachelor. If the employee finishes his university studies must choose the option: Bachelor. If the employee has studies of specialization you must choose the option: Graduated + Specializated. And if the employee has a completed mastery you must choose the option: Master."
       },
       {
         "factor":"Experience",
-        "help":"There is a list of available options, you have to choose the adequate option that match the previous work experience for this employee. You can choose between no experience and 15 or more years of experience",
-        "factorPosition":"2"
+        "help":"There is a list of options available, you must choose one of the options that corresponds with the employee's years of experience. If this is the first job of the employee must choose the option: Without Experience. If the employee has 1 year of experience he must choose the option: 1 or more years of experience, in the same way if the employee has 2 or 3 or more years of experience."
     
       },
       {
         "factor":"Management",
-        "help":"There is a list of available options, you have to choose the adequate option that match the type of management the employee has. Also you have to take into account the number of people in charge, responsibility for assignments, complexity of the project or client and resolution of human resources issues.",
-        "factorPosition":"3"
+        "help":"There is a list of options available, you must choose one of the options that corresponds to the level of management of the employee. Also you have to take into account the number of people in charge, responsibility for assignments, complexity of the project or client and resolution of human resources issues. For the first option you have to consider if tasks are assigned objectively, doesn't know how to estimate and needs high support with project management tools and with internal policies, low exposure to the client. For the second option you have to consider if tasks are assigned through an issue tracker, moderate and regular supervision is needed, assigned to perform simple tasks or tasks in a sprint backlog but needs help to estimate them. For the third option you have to consider if receives a list of tasks and can prioritize them, contributes in planning and participates preparing speech at meetings."
       },
       {
         "factor":"Communication",
-        "help":"There is a list of available options, you have to choose the adequate option that match the grade of communication the employee has.",
-        "factorPosition":"4"
+        "help":"There is a list of options available, you must choose one of the options that corresponds with the level of communication of the employee. If the employee only participates as a receiver and is not a communications issuer, he / she must choose the first option. If the meeting reports its own tasks and can answer questions from the external customer, you must choose the second option. If you have frequent contact with the client and exchange information about your tasks with the external customer, the internal and the supplier, you must choose the third option. If you have an operational role with outstanding management of communication problems you must choose the fourth option."
       },
       {
         "factor":"Technical Skills",
-        "help":"lalala",
-        "factorPosition":"5"
+        "help":"There is a list of options available, you must choose one of the options that corresponds with the technical level of the employee. If he has little or no knowledge of the programming tasks and is learning the development environment and how to debug you must choose the first option. If he knows something of programming language as its syntax but does not know frameworks or subsystems you must choose the second option. If he knows and uses namespaces and packages and develops very specific things you must choose the third option. If he can improve the quality of the product with clarity, simplicity and good performance of the generated code you must choose the fourth option."
                 
       },
       {
         "factor":"Leadership Experience",
-        "help":"lalalale",
-        "factorPosition":"6"
+        "help":"There is a list of options available, you must choose one of the options that corresponds with the level of leadership that the employee has. If the employee does not have experience leading you must choose the option: Without experience. If the employee has 1 year of leadership experience, he / she must choose the option: 1 or more years of experience, in the same way if the employee has 2 0 3 0 more years of experience in leadership. Leadership experience only considers real experience leading people and projects. Time spent without leading people should not be considered."
       },
       {
         "factor":"Empowerment",
-        "help":"lalalaemp",
-        "factorPosition":"7"
+        "help":"There is a list of options available, you must choose one of the options that corresponds with the level of employee empowerment. If your empowerment in the tasks is high you should choose the option: High. If your level of empowerment is medium you should choose the option: Medium. If your level of empowerment is low you should choose the option: Low."
       }
     ]
 }

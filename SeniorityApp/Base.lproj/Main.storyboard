@@ -209,7 +209,13 @@
                             <outlet property="delegate" destination="s2Z-tl-JHN" id="7Gb-gd-sT3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Seniority" id="yxz-dg-lXH"/>
+                    <navigationItem key="navigationItem" title="Seniority" id="yxz-dg-lXH">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="lHC-P0-okw">
+                            <connections>
+                                <segue destination="5Jx-fI-rEj" kind="push" id="tQy-YK-gQ6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="category" destination="cpe-rd-Gwy" id="IeI-hO-YTc"/>
                         <outlet property="points" destination="Yuk-u9-tPk" id="MEB-kz-9yM"/>
@@ -217,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20y-ov-yhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880.79999999999995" y="1505.3973013493255"/>
+            <point key="canvasLocation" x="1713" y="725"/>
         </scene>
         <!--Second Table View Controller-->
         <scene sceneID="N9g-FN-zgw">
@@ -259,7 +265,7 @@
                     <navigationItem key="navigationItem" id="mHQ-uJ-lsl">
                         <barButtonItem key="rightBarButtonItem" title="Help" id="b6z-0E-Q5U">
                             <connections>
-                                <segue destination="ted-1G-Ejw" kind="push" id="Kpx-oA-sYu"/>
+                                <segue destination="ted-1G-Ejw" kind="push" identifier="showHelp" id="Kpx-oA-sYu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -279,9 +285,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="TAD-bW-ZhT">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzJ-3f-Q5S">
+                                    <rect key="frame" x="133" y="26" width="108" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="JuV-KL-pq5">
+                            <rect key="frame" x="0.0" y="144" width="375" height="422"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vx-LS-Tz5">
+                                    <rect key="frame" x="14" y="0.0" width="347" height="414"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Help" id="jXn-7X-Lg4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jXn-7X-Lg4" id="BVP-aG-lt7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -295,10 +329,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Help" id="MuT-vL-MO4"/>
+                    <connections>
+                        <outlet property="helpTipLabel" destination="2Vx-LS-Tz5" id="sNC-zL-Pfl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwP-lq-VES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2545" y="1"/>
+            <point key="canvasLocation" x="2544.8000000000002" y="0.44977511244377816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yjQ-Hy-XVo">
@@ -327,4 +364,7 @@
     <resources>
         <image name="belatrixlogo" width="180" height="180"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tQy-YK-gQ6"/>
+    </inferredMetricsTieBreakers>
 </document>
