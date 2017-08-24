@@ -22,6 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *instructions;
 
+@property(strong)  NSIndexPath* lastIndexPath;
 
 - (IBAction)Help:(UIBarButtonItem *)sender;
 

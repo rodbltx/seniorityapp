@@ -12,5 +12,9 @@
 
 -(void)setFactorDegree:(NSString*)factorDegree;
 -(void)setFactorArray:(NSArray*)factorArray;
+-(void)setFactorDetailIndexPath:(NSIndexPath*)factorDetailIndexPath;
+-(int)calulateTableViewRows;
+
+
 
 @end

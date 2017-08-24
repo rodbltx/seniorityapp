@@ -35,6 +35,10 @@
     
     
     factorsDegreeValues = [[NSMutableDictionary alloc] init];
+    
+    _factorDetailIndexPath2 = [[NSMutableDictionary alloc] init];
+    
+   NSLog(@"dicionario: %@", _factorDetailIndexPath2);
 
 
     imageNameArray = [NSMutableArray arrayWithArray:@[@"image1",@"image2",@"image3",@"image4",@"image5",@"image6",@"image7"]];
@@ -84,7 +88,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *simpleTableIdentifier = @"FactorCell";
-    
+   
     ItemImageCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil){
@@ -97,7 +101,7 @@
     
     cell.imageView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
 
-        
+    
     return cell;
 }
 
@@ -107,13 +111,19 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showArrayDetail"]) {
+        
         selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSString *factorName = [factors objectAtIndex:selectedIndexPath.row];
         
         SecondTableViewController *destViewController = segue.destinationViewController;
         destViewController.delegate = self;
-        destViewController.factorName = [factors objectAtIndex:selectedIndexPath.row];
+        destViewController.factorName = factorName;
         destViewController.title = destViewController.factorName;
-
+        
+       // destViewController.lastIndexPath = _factorDetailIndexPath;
+        destViewController.lastIndexPath = [_factorDetailIndexPath2 objectForKey:factorName] ;
+        
     }
     
     
@@ -137,6 +147,18 @@
 
 }
 
+-(void)setFactorDetailIndexPath:(NSIndexPath*)factorDetailIndexPath{
+    
+    _factorDetailIndexPath = factorDetailIndexPath;
+    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:selectedIndexPath];
+    
+    [_factorDetailIndexPath2 setObject:_factorDetailIndexPath forKey:cell.textLabel.text];
+    
+
+
+}
+
 
 -(void)setFactorArray:(NSArray*)factorArray{
     
@@ -148,14 +170,43 @@
   
     [factorsDegreeValues setObject:[_factorDegreeArray objectAtIndex:1] forKey:cell.textLabel.text];
     
-    
     if ([factorsDegreeValues count]==7){
+        
         _calculateButton.enabled = YES;
+        [self resetTableViewContents];
+
     }
+    
+
+    
 }
 
+-(int)calulateTableViewRows{
+    int sections = [self.tableView numberOfSections];
+    int rows = 0;
+ 
+    for(int i=0; i < sections; i++)
+    {
+        rows += [self.tableView numberOfRowsInSection:i];
+    }
 
+    return rows;
+ }
 
+-(void)resetTableViewContents{
+    UITableViewCell *cell;
+    NSIndexPath *index;
+    int rows = [self calulateTableViewRows];
+    
+    for (int i = 0 ; i < rows; i++) {
+        index = [NSIndexPath indexPathForRow:i inSection:0];
+        cell = [self.tableView cellForRowAtIndexPath:index];
+        cell.detailTextLabel.text = @"";
+    }
+
+    [self viewDidLoad];
+    //NSLog(@"rows : %d", rows);
+}
 
 @end
 

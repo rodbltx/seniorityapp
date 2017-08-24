@@ -40,6 +40,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+  
+    
     formalEducation = @[@[@"Incomplete tertiary education",@1],@[@"Complete tertiary education, incomplete Bachelor level",@2],@[@"Bachelor",@3],@[@"Graduated + specialization",@5],@[@"Master",@6]];
     
     experience = @[@[@"Without experience.",@0],@[@"1 or more year of experience.",@1],@[@"2 or more year of experience.",@2],@[@"3 or more year of experience.",@3],@[@"4 or more year of experience.",@4],@[@"5 or more year of experience.",@5],@[@"7 or more year of experience.",@6],@[@"9 or more year of experience.",@7],@[@"11 or more year of experience.",@8],@[@"13 or more year of experience.",@9],@[@"15 or more year of experience.",@10]];
@@ -55,6 +58,8 @@
     elements = @[formalEducation,experience,management,communication,technicalSkills,leadershipExperience,empowerment];
     
     _instructions.text = [NSString stringWithFormat:@"Select the %s option for this employee:", [_factorName UTF8String]];
+    
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,11 +116,23 @@
     static NSString *simpleTableIdentifier = @"DetailCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+
+  
+
+    if ([indexPath compare:self.lastIndexPath] == NSOrderedSame)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+ 
+    
     
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    
     
     if ([_factorName isEqualToString:@"Formal Education"]){
         cell.textLabel.text = [[formalEducation objectAtIndex:indexPath.row] objectAtIndex:0];
@@ -149,12 +166,18 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    
+    
     factorDegreeArray = [elements[(int)elementId] objectAtIndex:indexPath.row];
                          
     factorDegreeString = [[elements[(int)elementId] objectAtIndex:indexPath.row] objectAtIndex:0];
     
     [[self delegate]setFactorDegree:factorDegreeString];
     [[self delegate]setFactorArray:factorDegreeArray];
+    [[self delegate]setFactorDetailIndexPath:indexPath];
+    
+    self.lastIndexPath = indexPath;
+    
+    [tableView reloadData];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

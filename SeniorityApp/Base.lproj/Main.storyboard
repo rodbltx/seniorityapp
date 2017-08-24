@@ -29,11 +29,11 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactorCell" textLabel="OPs-ZT-qw5" detailTextLabel="sQE-jy-iHr" style="IBUITableViewCellStyleSubtitle" id="Es0-ok-4ul">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FactorCell" textLabel="OPs-ZT-qw5" detailTextLabel="sQE-jy-iHr" style="IBUITableViewCellStyleSubtitle" id="Es0-ok-4ul">
                                 <rect key="frame" x="0.0" y="112" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Es0-ok-4ul" id="FVw-sB-V0J">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OPs-ZT-qw5">
@@ -109,7 +109,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zy3-7a-vi6">
-                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -212,7 +212,7 @@
                     <navigationItem key="navigationItem" title="Seniority" id="yxz-dg-lXH">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="lHC-P0-okw">
                             <connections>
-                                <segue destination="5Jx-fI-rEj" kind="push" id="tQy-YK-gQ6"/>
+                                <segue destination="5Jx-fI-rEj" kind="push" identifier="backToRoot" id="tQy-YK-gQ6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
