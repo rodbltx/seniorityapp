@@ -17,9 +17,6 @@
 
 @property (nonatomic, strong) NSString *factorName;
 
-@property(nonatomic,strong)NSString *factorDegreeString;
-@property(nonatomic,strong)NSArray *factorDegreeArray;
-
 @property (weak, nonatomic) IBOutlet UILabel *instructions;
 
 @property(strong)  NSIndexPath* lastIndexPath;

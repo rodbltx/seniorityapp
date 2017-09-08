@@ -19,6 +19,10 @@
     NSIndexPath *selectedIndexPath;
     
     NSMutableDictionary *factorsDegreeValues;
+    
+    NSString *factorDegreeString;
+    NSArray *factorDegreeArray;
+
 
 }
 
@@ -121,7 +125,6 @@
         destViewController.factorName = factorName;
         destViewController.title = destViewController.factorName;
         
-       // destViewController.lastIndexPath = _factorDetailIndexPath;
         destViewController.lastIndexPath = [_factorDetailIndexPath2 objectForKey:factorName] ;
         
     }
@@ -132,6 +135,11 @@
         
         resultViewController.delegate = self;
         resultViewController.factorsDegreeValues = factorsDegreeValues;
+        //factorsDegreeValues = nil;
+       
+        [self resetTableViewContents];
+        [self.tableView reloadData];
+         
         resultViewController.factors = factors;
         
 
@@ -143,7 +151,7 @@
 
 -(void)setFactorDegree:(NSString*)factorDegree{
     
-    _factorDegreeString = factorDegree;
+    factorDegreeString = factorDegree;
 
 }
 
@@ -162,18 +170,20 @@
 
 -(void)setFactorArray:(NSArray*)factorArray{
     
-    _factorDegreeArray = factorArray;
+    factorDegreeArray = factorArray;
 
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:selectedIndexPath];
 
-    cell.detailTextLabel.text = [_factorDegreeArray objectAtIndex:0];
+    cell.detailTextLabel.text = [factorDegreeArray objectAtIndex:0];
   
-    [factorsDegreeValues setObject:[_factorDegreeArray objectAtIndex:1] forKey:cell.textLabel.text];
+    [factorsDegreeValues setObject:[factorDegreeArray objectAtIndex:1] forKey:cell.textLabel.text];
+    
+    factorDegreeArray = [NSArray new];
     
     if ([factorsDegreeValues count]==7){
         
         _calculateButton.enabled = YES;
-        [self resetTableViewContents];
+  //      [self resetTableViewContents];
 
     }
     

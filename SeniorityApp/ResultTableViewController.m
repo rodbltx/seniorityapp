@@ -11,11 +11,10 @@
 
 
 @interface ResultTableViewController () {
-   // NSArray *factors;
+
     NSArray * allKeys;
     NSArray *allValues;
     
- //   NSMutableDictionary *factorsDegreeValues;
 }
     
 @end
@@ -112,6 +111,7 @@
         SeniorityTableViewController *seniorityViewController = segue.destinationViewController;
         seniorityViewController.delegate = self;
         seniorityViewController.factorsDegreeValues = _factorsDegreeValues;
+        _factorsDegreeValues = [NSMutableDictionary new];
     }
     
 }

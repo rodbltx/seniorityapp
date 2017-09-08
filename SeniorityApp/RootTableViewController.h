@@ -13,8 +13,6 @@
 
 @interface RootTableViewController : UITableViewController <FactorDegreeSelected>
 
-@property(nonatomic,strong)NSString *factorDegreeString;
-@property(nonatomic,strong)NSArray *factorDegreeArray;
 
 @property(strong) NSIndexPath *factorDetailIndexPath;
 

@@ -26,7 +26,7 @@
 }
 
 
-@synthesize delegate, factorDegreeString, factorDegreeArray;
+@synthesize delegate;//, factorDegreeString, factorDegreeArray;
 
 - (id) initWithStyle:(UITableViewStyle)style
 {
@@ -167,19 +167,23 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    
     
-    factorDegreeArray = [elements[(int)elementId] objectAtIndex:indexPath.row];
+    NSArray *factorDegreeArray = [elements[(int)elementId] objectAtIndex:indexPath.row];
                          
-    factorDegreeString = [[elements[(int)elementId] objectAtIndex:indexPath.row] objectAtIndex:0];
+    NSString *factorDegreeString = [[elements[(int)elementId] objectAtIndex:indexPath.row] objectAtIndex:0];
     
     [[self delegate]setFactorDegree:factorDegreeString];
     [[self delegate]setFactorArray:factorDegreeArray];
     [[self delegate]setFactorDetailIndexPath:indexPath];
+    
+    factorDegreeArray = [NSArray new];;
     
     self.lastIndexPath = indexPath;
     
     [tableView reloadData];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
+    
+    
 }
 
 

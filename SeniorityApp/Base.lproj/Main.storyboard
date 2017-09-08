@@ -109,7 +109,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zy3-7a-vi6">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -212,7 +212,7 @@
                     <navigationItem key="navigationItem" title="Seniority" id="yxz-dg-lXH">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="lHC-P0-okw">
                             <connections>
-                                <segue destination="5Jx-fI-rEj" kind="push" identifier="backToRoot" id="tQy-YK-gQ6"/>
+                                <action selector="onClickDone:" destination="s2Z-tl-JHN" id="Mka-3j-wFf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -364,7 +364,4 @@
     <resources>
         <image name="belatrixlogo" width="180" height="180"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tQy-YK-gQ6"/>
-    </inferredMetricsTieBreakers>
 </document>

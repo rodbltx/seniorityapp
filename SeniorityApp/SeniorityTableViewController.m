@@ -20,6 +20,7 @@
     [super viewDidLoad];
     
     [self calculateScore];
+    _factorsDegreeValues= [NSMutableDictionary new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,6 +102,10 @@
     
 }
 
+- (IBAction)onClickDone:(id)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 
 @end
